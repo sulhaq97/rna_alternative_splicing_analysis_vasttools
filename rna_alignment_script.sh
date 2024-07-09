@@ -1,6 +1,6 @@
 #!/bin/bash
-# custom file for HT29_MS023_1
-# the following are sbatch parameters
+# Alignment for RNA-seq
+# The following are the recommended parameters for aligning a sample file using STAR aligner prior to alternative splicing analysis
 #SBATCH -t 20:00:00
 #SBATCH -p himem
 #SBATCH --mem=60G
@@ -15,4 +15,4 @@ module load trim_galore/0.5.0
 module load cutadapt/2.5
 
 
-STAR --genomeDir /cluster/projects/lokgroup/cdx_omics/CDX_RNA_seq/STARIndex_hg19_genomeSAsparseD2 --runThreadN 1 --readFilesIn HT29_MS023_1.fastq.gz --readFilesCommand zcat --outFileNamePrefix HT29_MS023_1 --quantMode GeneCounts --outSAMtype BAM SortedByCoordinate
+STAR --genomeDir STAR_INDEX_PATH_HERE --runThreadN 1 --readFilesIn SAMPLE_FILES_GO_HERE --readFilesCommand zcat --outFileNamePrefix PREFIX_NAME_FOR_SAMPLE --quantMode GeneCounts --outSAMtype BAM SortedByCoordinate
