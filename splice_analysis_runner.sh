@@ -8,4 +8,4 @@
 
 module load R/4.2.1
 
-Rscript splice_on_cdxs.R
+Rscript splice_analysis.R
