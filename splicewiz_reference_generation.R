@@ -1,11 +1,12 @@
 library(SpliceWiz)
 
-ref_path <- "/cluster/home/sulhaq/splicewiz_ref"
+ref_path <- "path_to_where_reference_will_be_generated"
 
+# make sure both fasta and GTF files are same genome versions (both have to be either hg19 or hg38)
 buildRef(
     reference_path = ref_path,
-    fasta = "/cluster/tools/data/genomes/human/hg19/iGenomes/Sequence/WholeGenomeFasta/genome.fa",
-    gtf = "Homo_sapiens.GRCh37.87.SAMI_MODIFIED.gtf",
+    fasta = "Genome_FASTA_file_goes_here",
+    gtf = "GTF_file_goes_here",
     ontologySpecies = "Homo sapiens"
 )
 
